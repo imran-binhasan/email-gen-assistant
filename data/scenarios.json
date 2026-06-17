@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "intent": "Follow up on a job application submitted 2 weeks ago",
+        "facts": [
+            "Applied for Senior Backend Engineer role",
+            "Submitted on June 2",
+            "Have 4 years NestJS experience",
+            "Available for interview any time this week"
+        ],
+        "tone": "Formal, confident"
+    },
+    {
+        "id": 2,
+        "intent": "Inform a client their project delivery will be delayed",
+        "facts": [
+            "Original deadline was June 20th",
+            "New deadline is July 20th",
+            "Delay caused by third-part API integration issues",
+            "Offering 10% discount as compensation"
+        ],
+        "tone": "Apologetic, professional"
+    },
+    {
+        "id": 3,
+        "intent": "Reach out to a potential B2B client for SaaS product",
+        "facts": [
+            "Product is an AI-powered HR automation tool",
+            "Reduces onboarding time by 40%",
+            "Free 14-day trial available",
+            "Targeting companies with 50-200 employees"
+        ],
+        "tone": "Casual, persuasive"
+    },
+    {
+        "id": 4,
+        "intent": "Request a 30-minute meeting with CTO",
+        "facts": [
+            "Want to discuss a potential API partnership",
+            "Company has 10,000 active users",
+            "Integration would benefit both platform",
+            "Flexible on timing"
+        ],
+        "tone": "Formal, respectful"
+    },
+    {
+        "id": 5,
+        "intent": "Remind a client about an overdue invoice",
+        "facts": [
+            "Invoice #1042 for $3,500",
+            "Due date was June 1st",
+            "Now 16 days overdue",
+            "Payment options include bank transfer or Stripe link"
+        ],
+        "tone": "Firm but polite"
+    },
+    {
+        "id": 6,
+        "intent": "Send constructive feedback to a junior team member after a project",
+        "facts": [
+            "Project was delivered on time",
+            "Code quality needs improvement, missing tests",
+            "Communication during standups was excellent",
+            "Recommend a code review workshop"
+        ],
+        "tone": "Empathetic, constructive"
+    },
+    {
+        "id": 7,
+        "intent": "Propose a content partnership between two companies",
+        "facts": [
+            "Proposing co-authored blog series",
+            "Both companies serve the same developer audience",
+            "Revenue share model on any leads generated",
+            "Open to a discovery call next week"
+        ],
+        "tone": "Enthusiastic, professional"
+    },
+    {
+        "id": 8,
+        "intent": "Escalate a critical production bug to engineering leadership",
+        "facts": [
+            "Bug causes payment failures for 12% of users",
+            "Discovered at 2am",
+            "Hotfix ETA is 4 hours",
+            "Customers already notified"
+        ],
+        "tone": "Urgent, direct"
+    },
+    {
+        "id": 9,
+        "intent": "Inquire about scholarship availability for an international student",
+        "facts": [
+            "Applying for MSc in Computer Science for 2027 intake",
+            "From Bangladesh, CGPA 3.69",
+            "Interested in AI/ML track",
+            "Asking about merit-based funding"
+        ],
+        "tone": "Formal, humble"
+    },
+    {
+        "id": 10,
+        "intent": "Negotiate better terms on a software vendor contract renewal",
+        "facts": [
+            "Current contract is $12,000 per year",
+            "Been a customer for 3 years",
+            "Usage has grown 60% this year",
+            "Requesting either a discount or additional seats at same price"
+        ],
+        "tone": "Assertive, professional"
+    }
+]
