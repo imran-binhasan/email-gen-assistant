@@ -2,8 +2,12 @@ import json
 import csv
 import time
 import os
+import sys
 from app.generator import generate_mail
 from app.evaluator import evaluate
+
+# Force line-buffered stdout so progress is visible when piped to a file
+sys.stdout.reconfigure(line_buffering=True)
 
 # ── Load data ──────────────────────────────────────────────────────────────────
 
@@ -18,7 +22,10 @@ reference_map = {r["id"]: r["reference"] for r in references}
 
 # ── Config ─────────────────────────────────────────────────────────────────────
 
-MODELS = ["gemini", "groq"]
+# Comparing two PROMPTING STRATEGIES on the same model (Gemini 3.1 Flash Lite):
+# - "gemini"          → Advanced: role-play + few-shot examples + tone hints
+# - "gemini_baseline" → Baseline: zero-shot, role-play system prompt only
+MODELS = ["gemini", "gemini_baseline"]
 
 # ── Results collector ──────────────────────────────────────────────────────────
 
@@ -108,9 +115,9 @@ for model in MODELS:
         print(f"  ✓ Overall:        {result['overall_score']}\n")
 
         # ── Rate limiting ──────────────────────────────────────────────────────
-        # Small delay between calls to avoid hitting API rate limits.
-        # 2 seconds is safe for both Gemini and Groq free tiers.
-        time.sleep(13)
+        # 20s gap + 5s × 2 sleeps inside evaluate() = ~32s per scenario.
+        # Gemini 3.1 Flash Lite judge calls hit ~5-6 RPM, well under 15 RPM.
+        time.sleep(20)
 
 # ── Save results ───────────────────────────────────────────────────────────────
 
